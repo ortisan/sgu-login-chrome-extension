@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "Login Sgu",
+    "description": "Plugin para login no sgu.",
+    "version": "1.0",
+    "browser_action": {
+        "default_title": "Login Sgu"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://10.200.240.186/sgu/"
+            ],
+            "css": [
+                "css/style.css"
+            ],
+            "js": [
+                "js/jquery-3.2.1.min.js",
+                "js/script.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "http://10.200.240.186/sgu/"
+    ]
+}
